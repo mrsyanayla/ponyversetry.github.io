@@ -145,3 +145,31 @@ footer strong{font:600 1.2rem 'Fredoka',sans-serif}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.sp{opacity:.7}}
 .logo {
   
+.music-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f9a8d4, #c4b5fd);
+  box-shadow: 0 0 20px rgba(249, 168, 212, 0.8);
+  z-index: 1000;
+  animation: floaty 3s ease-in-out infinite;
+}
+@keyframes floaty {
+  50% { transform: translateY(-8px); }
+}
+.music-box {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  width: 300px;
+  max-width: 85vw;
+  display: none;
+  z-index: 1000;
+}
+.music-box.show { display: block; }
