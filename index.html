@@ -143,11 +143,38 @@ $$('.add').forEach(b=>b.addEventListener('click',e=>{
   toast('Masuk keranjang ✨');burst(e.clientX,e.clientY,12);
 }));
 </script>
-  <button id="musicBtn" class="music-btn" aria-label="Putar musik">🦄</button>
+<style>
+  #musicBtn {
+    position: fixed !important;
+    right: 20px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    font-size: 32px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f9a8d4, #c4b5fd);
+    box-shadow: 0 0 20px rgba(249, 168, 212, 0.8);
+    z-index: 9999;
+  }
+  #musicBox {
+    position: fixed !important;
+    right: 20px;
+    bottom: 96px;
+    width: 320px;
+    max-width: 85vw;
+    display: none;
+    z-index: 9999;
+  }
+  #musicBox.show { display: block; }
+</style>
 
-<div id="musicBox" class="music-box">
+<button id="musicBtn" aria-label="Putar musik">🦄</button>
+
+<div id="musicBox">
   <iframe
-    src="https://open.spotify.com/embed/track/4XYCWx98N3h7Y4FtDFmpd5"
+    src="https://open.spotify.com/embed/track/ID_PURPLE_KAMU"
     width="100%" height="152" frameborder="0"
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
     loading="lazy"></iframe>
