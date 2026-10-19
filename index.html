@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ponyverse</title>
+  <link rel="icon" href="logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="aurora"><i></i><i></i><i></i><i></i></div>
+  <div id="sparkles"></div>
+
+  <nav>
+    <div class="pill" role="tablist">
+      <button class="on" data-go="home" role="tab">Home</button>
+      <button data-go="design" role="tab">Design</button>
+      <button data-go="product" role="tab">Product</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HOME -->
+    <section class="page show" id="home">
+      <div class="hero">
+        <div class="logo-wrap" id="logo" title="Klik aku!">
+          <img src="logo.jpg" alt="Logo Ponyverse: tanduk unicorn pelangi dengan sayap dan bintang">
+        </div>
+        <h1><small>Selamat datang di</small><span class="rainbow-text">Ponyverse</span></h1>
+        <p class="tagline">Dunia pastel tempat imajinasi berlari bebas. Satu tanduk, banyak warna, dan persahabatan yang membuat semuanya bersinar.</p>
+        <div class="cta">
+          <button class="btn" data-go="design">Lihat desain</button>
+          <button class="btn alt" data-go="product">Jelajahi produk</button>
+        </div>
+        <div class="chips">
+          <span class="chip">Ungu</span><span class="chip">Pink</span><span class="chip">Kuning</span><span class="chip">Hijau</span><span class="chip">Biru</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN -->
+    <section class="page" id="design">
+      <div class="head">
+        <h2 class="rainbow-text">Desain Ponyverse</h2>
+        <p>Klik warna untuk menyalin kodenya.</p>
+      </div>
+      <div class="swatches">
+        <button class="sw" data-hex="#A98BE0"><b style="background:#a98be0"></b><span>Ungu Mimpi<em>#A98BE0</em></span></button>
+        <button class="sw" data-hex="#F78FB9"><b style="background:#f78fb9"></b><span>Pink Permen<em>#F78FB9</em></span></button>
+        <button class="sw" data-hex="#FFD966"><b style="background:#ffd966"></b><span>Kuning Bintang<em>#FFD966</em></span></button>
+        <button class="sw" data-hex="#7FD6A6"><b style="background:#7fd6a6"></b><span>Hijau Padang<em>#7FD6A6</em></span></button>
+        <button class="sw" data-hex="#78AEF0"><b style="background:#78aef0"></b><span>Biru Langit<em>#78AEF0</em></span></button>
+      </div>
+      <div class="meaning">
+        <div class="card"><span class="ico">🦄</span><h3>Tanduk</h3><p>Lima warna berpilin menjadi satu. Setiap warna berbeda, tetapi bersama-sama membentuk satu bentuk yang utuh.</p></div>
+        <div class="card"><span class="ico">🪽</span><h3>Sayap</h3><p>Lapisan sayap pastel melambangkan kebebasan untuk berkreasi dan bermimpi setinggi mungkin.</p></div>
+        <div class="card"><span class="ico">⭐</span><h3>Bintang</h3><p>Bintang berwarna di tengah mengingatkan bahwa setiap anggota punya cahaya sendiri.</p></div>
+      </div>
+      <div class="fonts">
+        <div class="big rainbow-text">Fredoka untuk judul</div>
+        <p style="margin-top:8px;font-weight:800">Nunito untuk teks bacaan yang lembut dan jelas.</p>
+      </div>
+    </section>
+
+    <!-- PRODUCT -->
+    <section class="page" id="product">
+      <div class="head">
+        <h2 class="rainbow-text">Produk Ponyverse</h2>
+        <p>Koleksi pastel untuk teman-teman pemimpi.</p>
+      </div>
+      <div class="grid">
+        <article class="prod"><span class="emoji">🌈</span><h3>Lampu Tanduk Pelangi</h3><p>Lampu tidur berpilin yang menyala lembut dalam lima warna.</p><div class="row"><span class="price">Rp89.000</span><button class="add">Tambah</button></div></article>
+        <article class="prod"><span class="emoji">🪽</span><h3>Tote Bag Sayap</h3><p>Tas kanvas dengan sayap pastel di kedua sisinya.</p><div class="row"><span class="price">Rp65.000</span><button class="add">Tambah</button></div></article>
+        <article class="prod"><span class="emoji">✨</span><h3>Stiker Bintang Kristal</h3><p>Satu set stiker holografis untuk laptop dan buku catatan.</p><div class="row"><span class="price">Rp25.000</span><button class="add">Tambah</button></div></article>
+        <article class="prod"><span class="emoji">📒</span><h3>Buku Catatan Ponyverse</h3><p>Sampul tebal bermotif logo, kertas lembut 100 halaman.</p><div class="row"><span class="price">Rp45.000</span><button class="add">Tambah</button></div></article>
+        <article class="prod"><span class="emoji">🎀</span><h3>Pita Surai</h3><p>Pita satin warna-warni untuk rambut atau hadiah.</p><div class="row"><span class="price">Rp18.000</span><button class="add">Tambah</button></div></article>
+        <article class="prod"><span class="emoji">🥤</span><h3>Botol Minum Unicorn</h3><p>Botol 500 ml dengan tutup berbentuk tanduk.</p><div class="row"><span class="price">Rp79.000</span><button class="add">Tambah</button></div></article>
+      </div>
+    </section>
+  </main>
+
+  <button class="cart" id="cart" aria-label="Keranjang">🛒<span id="count">0</span></button>
+  <div id="toast" role="status"></div>
+
+  <footer>
+    <span>Version 1.0</span>
+    <strong class="rainbow-text">Ponyverse</strong>
+    <span>Powered by Claude</span>
+  </footer>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const colors=['#a98be0','#f78fb9','#ffd966','#7fd6a6','#78aef0'];
+
+/* bintang berkelip di latar */
+const sp=$('#sparkles');
+for(let i=0;i<34;i++){
+  const s=document.createElement('i');s.className='sp';
+  const z=8+Math.random()*20;
+  s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${z}px;height:${z}px;background:${colors[i%5]};--d:${2+Math.random()*4}s;animation-delay:${-Math.random()*5}s`;
+  sp.appendChild(s);
+}
+
+/* ledakan bintang */
+function burst(x,y,n=16){
+  for(let i=0;i<n;i++){
+    const b=document.createElement('i');b.className='burst';
+    const a=Math.random()*Math.PI*2,d=60+Math.random()*110;
+    b.style.cssText=`left:${x}px;top:${y}px;background:${colors[i%5]};--x:${Math.cos(a)*d}px;--y:${Math.sin(a)*d}px`;
+    document.body.appendChild(b);setTimeout(()=>b.remove(),950);
+  }
+}
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),1800)};
+
+/* pindah bagian */
+function go(id){
+  if(!$('#'+id))id='home';
+  $$('.page').forEach(p=>p.classList.toggle('show',p.id===id));
+  $$('.pill button').forEach(b=>{const on=b.dataset.go===id;b.classList.toggle('on',on);b.setAttribute('aria-selected',on)});
+  history.replaceState(null,'','#'+id);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+$$('[data-go]').forEach(b=>b.addEventListener('click',e=>{go(b.dataset.go);burst(e.clientX,e.clientY,10)}));
+go(location.hash.slice(1)||'home');
+
+/* logo interaktif */
+$('#logo').addEventListener('click',e=>{burst(e.clientX,e.clientY,26);toast('Hai, teman Ponyverse! 🦄')});
+
+/* salin warna */
+$$('.sw').forEach(b=>b.addEventListener('click',e=>{
+  navigator.clipboard?.writeText(b.dataset.hex).catch(()=>{});
+  toast('Disalin: '+b.dataset.hex);burst(e.clientX,e.clientY,12);
+}));
+
+/* keranjang */
+let n=0;
+$$('.add').forEach(b=>b.addEventListener('click',e=>{
+  $('#count').textContent=++n;
+  const c=$('#cart');c.classList.remove('pop');void c.offsetWidth;c.classList.add('pop');
+  toast('Masuk keranjang ✨');burst(e.clientX,e.clientY,12);
+}));
+</script>
+</body>
+</html>
