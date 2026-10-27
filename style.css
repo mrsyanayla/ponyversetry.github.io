@@ -143,4 +143,125 @@ footer strong{font:600 1.2rem 'Fredoka',sans-serif}
 
 @media (max-width:560px){.pill button{padding:10px 16px;font-size:.95rem}footer{justify-content:center;text-align:center}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.sp{opacity:.7}}
+/* TAMBAHKAN di bagian paling bawah style.css */
 
+.fl {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 16px 80px;
+  color: #ece6f7;
+}
+
+.fl-title {
+  text-align: center;
+  font-size: clamp(2rem, 8vw, 3rem);
+  margin: 0 0 32px;
+  background: linear-gradient(90deg, #9b7fd4, #e0709a, #f4c95d, #5aa9e6, #6cc08b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Tiap bagian punya kotak sendiri */
+.fl-card {
+  margin-bottom: 24px;
+  padding: 24px 22px 26px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(145deg, rgba(155, 127, 212, 0.28), rgba(90, 169, 230, 0.10) 60%, rgba(224, 112, 154, 0.14));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.fl-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.fl-card p {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #e3dbf2;
+}
+
+/* Momen utama: lima warna menyatu menjadi satu cahaya */
+.fl-merge {
+  position: relative;
+  height: 170px;
+  margin-top: 18px;
+}
+
+.fl-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin: -40px 0 0 -40px;
+  border-radius: 50%;
+  background: var(--c);
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  transform: translateX(var(--x));
+  transition: transform 1.8s cubic-bezier(0.65, 0, 0.25, 1);
+}
+
+.fl-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130px;
+  height: 130px;
+  margin: -65px 0 0 -65px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, rgba(255, 255, 255, 0.55) 40%, transparent 70%);
+  opacity: 0;
+  transform: scale(0.4);
+  transition: opacity 1.2s ease 1.5s, transform 1.2s ease 1.5s;
+}
+
+.fl-merge.show .fl-dot { transform: translateX(0); }
+.fl-merge.show .fl-glow { opacity: 1; transform: scale(1.1); }
+
+/* Jobdesk: garis warna di kiri menunjukkan warna anggota */
+.fl-roles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.fl-roles li {
+  padding: 12px 16px;
+  border-left: 5px solid var(--c);
+  border-radius: 6px 16px 16px 6px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.fl-roles b { display: block; color: var(--c); margin-bottom: 4px; }
+.fl-roles span { font-size: 0.97rem; line-height: 1.65; color: #e3dbf2; }
+
+/* Penutup */
+.fl-meaning { margin: 0; }
+.fl-meaning dt { font-weight: 700; color: #fff; margin-top: 16px; }
+.fl-meaning dd { margin: 4px 0 0; line-height: 1.7; color: #e3dbf2; }
+
+.fl-card p.fl-quote {
+  margin-top: 28px;
+  padding-top: 20px;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #fff;
+  border-top: 2px solid;
+  border-image: linear-gradient(90deg, #9b7fd4, #e0709a, #f4c95d, #5aa9e6, #6cc08b) 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fl-dot, .fl-glow { transition: none; }
+  .fl-dot { transform: translateX(0); }
+  .fl-glow { opacity: 1; transform: scale(1.1); }
+}
