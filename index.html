@@ -38,6 +38,80 @@
         <div class="chips">
           <span class="chip">Ungu</span><span class="chip">Pink</span><span class="chip">Kuning</span><span class="chip">Hijau</span><span class="chip">Biru</span>
         </div>
+        <!-- TEMPEL di index.html, di dalam bagian Home (setelah logo & tulisan "Selamat datang di...") -->
+<section id="filosofi" class="fl">
+  <h2 class="fl-title">Filosofi Logo</h2>
+
+  <!-- KOTAK 1: Pembuka -->
+  <article class="fl-card">
+    <h3>Lima warna, satu cahaya</h3>
+    <p>
+      Ponyverse terinspirasi dari dunia My Little Pony, tempat setiap karakter punya warna,
+      kepribadian, dan kekuatan yang berbeda. Kami adalah lima anggota dengan kemampuan
+      yang berlainan. Seperti para pony, kami tidak harus sama untuk bisa bersatu.
+      Justru perbedaan itulah yang membuat kami lengkap.
+    </p>
+    <!-- Momen utama: lima warna bergerak menyatu menjadi satu cahaya -->
+    <div class="fl-merge" aria-hidden="true">
+      <span class="fl-dot" style="--c:#9b7fd4;--x:-100px"></span>
+      <span class="fl-dot" style="--c:#e0709a;--x:-50px"></span>
+      <span class="fl-dot" style="--c:#f4c95d;--x:0px"></span>
+      <span class="fl-dot" style="--c:#5aa9e6;--x:50px"></span>
+      <span class="fl-dot" style="--c:#6cc08b;--x:100px"></span>
+      <span class="fl-glow"></span>
+    </div>
+  </article>
+
+  <!-- KOTAK 2: Jobdesk -->
+  <article class="fl-card">
+    <h3>Lima warna, lima kekuatan</h3>
+    <!-- Pasangan warna dan peran ini usulan; ganti sesuai anggota kelompokmu -->
+    <ul class="fl-roles">
+      <li style="--c:#9b7fd4"><b>Ungu: Web Programmer</b><span>Membangun fondasi dan merangkai semua bagian menjadi satu situs yang hidup.</span></li>
+      <li style="--c:#e0709a"><b>Pink: Apps Programmer</b><span>Mengubah ide menjadi aplikasi yang bisa dipakai dan dirasakan langsung.</span></li>
+      <li style="--c:#f4c95d"><b>Kuning: Content Writer</b><span>Menerjemahkan gagasan menjadi kata-kata yang mudah dipahami dan berkesan.</span></li>
+      <li style="--c:#5aa9e6"><b>Biru: Graphic Designer 1</b><span>Merangkai presentasi supaya cerita kelompok tersampaikan dengan jelas dan menarik.</span></li>
+      <li style="--c:#6cc08b"><b>Hijau: Graphic Designer 2</b><span>Menciptakan logo dan identitas visual yang menjadi wajah Ponyverse.</span></li>
+    </ul>
+  </article>
+
+  <!-- KOTAK 3: Penutup -->
+  <article class="fl-card">
+    <h3>Makna di balik logo</h3>
+    <dl class="fl-meaning">
+      <dt>Tanduk unicorn berwarna spiral</dt>
+      <dd>Simbol keajaiban dan kekuatan. Lima warnanya mewakili lima anggota yang saling melilit, saling melengkapi, dan naik bersama menuju satu tujuan.</dd>
+      <dt>Bintang kompas di dasar tanduk</dt>
+      <dd>Titik temu semua warna. Di sinilah lima kemampuan berbeda menyatu menjadi satu kekuatan sekaligus arah yang menuntun kelompok.</dd>
+      <dt>Empat bintang kecil yang berkilau</dt>
+      <dd>Percikan ide dan kreativitas yang lahir saat kami berkolaborasi. Setiap anggota memberi cahayanya sendiri.</dd>
+      <dt>Sayap berlapis warna pelangi</dt>
+      <dd>Kebebasan berkreasi dan semangat untuk terus berkembang. Lapisannya menunjukkan bahwa keberhasilan dibangun dari kontribusi yang saling menopang.</dd>
+      <dt>Busur ungu yang melingkupi</dt>
+      <dd>Kebersamaan dan rasa saling menjaga, supaya setiap anggota merasa aman untuk berkembang.</dd>
+      <dt>Lingkaran putih bertepi warna-warni</dt>
+      <dd>Putih adalah gabungan semua warna cahaya. Lima warna yang menyatu menghasilkan cahaya lebih terang daripada warna mana pun sendirian.</dd>
+    </dl>
+    <p class="fl-quote">
+      Satu warna bisa indah, tetapi lima warna yang bersatu menciptakan cahaya. Itulah Ponyverse.
+    </p>
+  </article>
+</section>
+
+<script>
+  // Memicu animasi saat kotak pertama terlihat di layar (hanya sekali)
+  (function () {
+    var merge = document.querySelector('#filosofi .fl-merge');
+    if (!merge) return;
+    if (!('IntersectionObserver' in window)) { merge.classList.add('show'); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { merge.classList.add('show'); io.disconnect(); }
+      });
+    }, { threshold: 0.6 });
+    io.observe(merge);
+  })();
+</script>
        <div style="width:100%;max-width:900px;margin:80px auto 40px;padding:0 16px;">
   <h2 style="margin:0 0 24px;color:#fff;text-align:center;">Presentasi Kelompok Kami</h2>
 
